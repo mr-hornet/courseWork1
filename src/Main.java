@@ -15,29 +15,29 @@ public class Main {
 
         employeeBook.getListAll();
 
-        employeeBook.salaryCosts();
+        System.out.println("Общие траты на ЗП = " + employeeBook.salaryCosts());
 
-        employeeBook.minSalary();
+        System.out.println("Минимальная ЗП у " + employeeBook.minSalary());
 
-        employeeBook.maxSalary();
+        System.out.println("Максимальная ЗП у " + employeeBook.maxSalary());
 
-        employeeBook.averageValueSalary();
+        System.out.println("Средная ЗП = " + employeeBook.averageValueSalary());
 
-        employeeBook.getFIO();
+        employeeBook.printFIO();
 
         employeeBook.changeSalary();
 
-        employeeBook.minSalaryDepartment(1);
+        System.out.println("Минимальная ЗП у " + employeeBook.minSalaryDepartment(1));
 
-        employeeBook.maxSalaryDepartment(1);
+        System.out.println("Максимальная ЗП у " + employeeBook.maxSalaryDepartment(1));
 
-        employeeBook.salaryCostsDepartment(2);
+        System.out.println("Общие траты на ЗП в отделе = " + employeeBook.salaryCostsDepartment(2));
 
-        employeeBook.averageValueSalaryDepartment(1);
+        System.out.println("Средние траты на ЗП в отделе = " + employeeBook.averageValueSalaryDepartment(10));
 
         employeeBook.changeSalaryDepartment(2);
 
-        employeeBook.getPersonDepartment(1);
+        employeeBook.printPersonDepartment(1);
 
         employeeBook.salaryLessNumber(150);
 
