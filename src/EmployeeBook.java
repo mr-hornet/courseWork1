@@ -66,7 +66,12 @@ public class EmployeeBook {
             total = total + e.getSalary();
             count++;
         }
-        return (double) total / count;
+        if (count == 0) {
+            System.out.println("Сотрудников нет");
+            return 0.0;
+        } else {
+            return (double) total / count;
+        }
     }
 
     public void printFIO() {
@@ -138,22 +143,21 @@ public class EmployeeBook {
     public double averageValueSalaryDepartment(int department) {
         int total = 0;
         int count = 0;
-        boolean haveDepartment = false;
         for (Employee e : employees) {
             if (e == null) {
                 continue;
             }
             if (e.getDepartment() == department) {
-                haveDepartment = true;
                 total = total + e.getSalary();
                 count++;
             }
-            if (!haveDepartment) {
-                System.out.println("Такого департамента нет");
-                return 0.0;
-            }
         }
-        return (double) total / count;
+        if (count == 0) {
+            System.out.println("Такого департамента нет");
+            return 0.0;
+        } else {
+            return (double) total / count;
+        }
     }
 
     public void changeSalaryDepartment(int department) {
